@@ -32,8 +32,7 @@ def calculo_de_descontos():
     calculos['faltas'] = soma_das_faltas
     calculos['descontos'] = calculos['inss'] + calculos['ir'] + calculos['sindicato'] + calculos['faltas']
     calculos['total_liquido'] = calculos['bruto'] - calculos['descontos']
-    return calculos  # calculos tem várias 'variáveis' dentro dela. Vc está retornando todas essas váriaveis quando
-    # executa ela
+    return calculos  
 
 
 def mostrando_salario(bruto, inss, sindicato, ir, faltas, descontos, total_liquido):
@@ -46,10 +45,8 @@ def mostrando_salario(bruto, inss, sindicato, ir, faltas, descontos, total_liqui
     print("O funcionário deverá receber: R$ {}".format(total_liquido))
 
 
-total_descontos = calculo_de_descontos()  # agora todas as váriáeis que existiam dentro do dicionário calculos vão
-# estar dentro da variavel valores
+total_descontos = calculo_de_descontos()  
 
 mostrando_salario(total_descontos['bruto'], total_descontos['inss'], total_descontos['sindicato'],
                   total_descontos['ir'], total_descontos['faltas'], total_descontos['descontos'],
                   total_descontos['total_liquido'])
-# aqui preciso colocar os valores na ordem que vc definiu na hora de criar a função 'saida_dos_valores'
